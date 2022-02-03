@@ -1,0 +1,97 @@
+// Rofi theme
+// Created by lazy_noradic
+
+/// Colours
+* {
+  cBGDim:		rgba (80, 80, 80, 60%);
+  cBG:			#222222;
+  cBG2:			rgba (28, 28, 28, 100%);
+  cHighlighted:		#333333;
+  cForeground:		#c4c4c4;
+}
+
+/// Window ///
+window {
+  background-color:	var(cBGDim);
+  fullscreen:		true;
+}
+	/// Main box ///
+	mainbox {
+	  background-color:	var(cBG);
+	  padding:		35;
+	  margin:		400 940;
+	  border-color:		var(cForeground);
+	  border:		0px;
+	  border-radius:	10px;
+	}
+		/// Input bar/Search bar ///
+		inputbar {
+		  background-color:	transparent;
+		  border-radius:	5;
+		  margin:		0 0 10 0;
+		}
+			case-indicator {
+			  enabled:	false;
+			}
+			prompt {
+			  enabled:	false;
+			}
+			entry {
+			  background-color:	var(cBG2);
+			  text-color:		var(cForeground);
+			  padding:		10 5;
+			}
+
+		/// Message ///
+		message {
+		}
+		textbox {
+		}
+
+		/// Listview ///
+		listview {
+		  background-color:	transparent;
+		  columns:		1;
+		  spacing:		10;
+		}
+		scrollbar {
+		}
+			/// Elements ///
+			element {
+			  background-color:	var(cBG);
+			  border-radius:	5;
+			}
+				/// Icon & text ///
+				element-icon {
+				  background-color:	transparent;
+				  size:			2.00em ;
+				  padding:		5 0 5 5;
+				}
+				element-text {
+				  background-color:	transparent;
+				  text-color:		var(cForeground);
+				  padding:		15 0 5 10;
+				}
+
+				element normal.normal {
+				  background-color:	var(cBG);
+				}
+				element normal.urgent {
+				  background-color:	var(cBG);
+				}
+				element normal.active {
+				  background-color:	var(cBG);
+				}
+
+				element selected.normal {
+				  background-color:	var(cHighlighted);
+				}
+				element selected.urgent {
+				  background-color:	var(cHighlighted);
+				}
+				element selected.active {
+				  background-color:	var(cHighlighted);
+				}
+	
+sidebar { 
+}
