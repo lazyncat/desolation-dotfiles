@@ -182,6 +182,10 @@ bindsym $mod+r mode "resize"
 
 ########################## Styles ##########################
 gaps inner 5
+gaps top 50
+gaps bottom 5
+gaps right 5
+gaps left 5
 for_window [class="^.*"] border pixel 0
 
 

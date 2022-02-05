@@ -46,7 +46,7 @@ interval = 5
 date = "%d/%m"
 date-alt = " %d/%m/%Y"
 
-time = "%r You WILL have time later."
+time = "%r"
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -122,7 +122,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 80
 
 format = <ramp> <label>
 format-underline = #f50a4d

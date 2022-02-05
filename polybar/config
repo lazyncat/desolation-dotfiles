@@ -9,39 +9,49 @@ alert		= #bd2c40
 
 [global/wm]
 include-file	= ~/.config/polybar/modules
-margin-top	= 0
-margin-bottom	= 0
 
-;;; Backup bar ;;;
+[bar/root]
+monitor			= DP-2
+font-0			= "JetBrainsMono:size=10;2.5"
 
-[bar/backup]
-monitor		= DP-2
+height			= 35
+radius			= 8.0
+border-top-size		= 10
 
-font-0		= "JetBrainsMono:size=10;2.5"
+background		= ${colors.background}
+foreground		= ${colors.foreground}
 
-height		= 35
-radius		= 8.0
-padding-right	= 18
+cursor-click		= pointer
+cursor-scroll		= ns-resize
 
-border-top-size		= 5px
-border-left-size	= 5px
-border-right-size	= 5px
+fixed-center		= true
 
-background	= ${colors.background}
-foreground	= ${colors.foreground}
+override-redirect	= true
+wm-restack		= i3
 
-cursor-click	= pointer
-cursor-scroll	= ns-resize
+[bar/left]
+inherit=bar/root
+width			= 413
+border-left-size	= 10
+modules-left		= i3 
 
-fixed-center	= true
+[bar/center]
+inherit=bar/root
+width			= 160
+offset-x		= 50%:-80
+modules-center		= date
 
-modules-left	= i3
-modules-center	= date
-modules-right	= pulseaudio temperature cpu memory
+[bar/right]
+inherit=bar/root
+width			= 450
+padding-right		= 1
+offset-x		= 100%:-450
+border-right-size	= 10
+modules-right		= pulseaudio temperature cpu memory
 
-tray-position	= right
-tray-detached	= true
-tray-offset-x	= -6
+tray-position		= left
+tray-detached		= true
+tray-offset-x		= 6
 
 [settings]
 screenchange-reload = true
